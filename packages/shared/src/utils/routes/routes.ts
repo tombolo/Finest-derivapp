@@ -13,7 +13,7 @@ export const routes = {
     // platforms
     mt5: '/mt5',
     dxtrade: '/derivx',
-    bot: '/',
+    bot: '/bot',
     trade: '/dtrader',
     trader_positions: '/dtrader/positions',
     smarttrader: getUrlSmartTrader(),
