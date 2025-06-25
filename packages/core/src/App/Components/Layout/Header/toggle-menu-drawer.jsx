@@ -375,7 +375,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                                 </MobileDrawer.Item>
                                 <MobileDrawer.Item>
                                     <a
-                                        href='https://www.instagram.com/gletraders?igsh=MXdqdTRyYmx4OTR6OQ=='
+                                        href='https://www.instagram.com/nilote_gramm/#'
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         className='header__menu-mobile-link'
@@ -388,7 +388,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                                 {/* Telegram */}
                                 <MobileDrawer.Item>
                                     <a
-                                        href='https://t.me/+9aI3zpSwoJw0ZDM0'
+                                        href='https://t.me/vviptraderswithnilote'
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         className='header__menu-mobile-link'
@@ -401,7 +401,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                                 {/* TikTok */}
                                 <MobileDrawer.Item>
                                     <a
-                                        href='https://www.tiktok.com/@gletraders.com?_t=ZM-8wvMYf6TO00&_r=1'
+                                        href='https://www.tiktok.com/@nilote_gram?_t=ZM-8vkvoV9Hwf7&_r=1'
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         className='header__menu-mobile-link'
@@ -410,17 +410,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                                         <span className='header__menu-mobile-link-text'>TikTok</span>
                                     </a>
                                 </MobileDrawer.Item>
-                                {route !== routes.traders_hub && (
-                                    <MobileDrawer.Item>
-                                        <MenuLink
-                                            link_to={routes.trade}
-                                            icon='IcTrade'
-                                            text={localize('Trade')}
-                                            onClickLink={toggleDrawer}
-                                            is_active={route === routes.trade}
-                                        />
-                                    </MobileDrawer.Item>
-                                )}
+
                                 {primary_routes_config.map((route_config, idx) =>
                                     getRoutesWithSubMenu(route_config, idx)
                                 )}
@@ -448,28 +438,13 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                                 {HelpCentreRoute()}
                                 {is_logged_in ? (
                                     <React.Fragment>
-                                        <MobileDrawer.Item>
-                                            <MenuLink
-                                                link_to={routes.account_limits}
-                                                icon='IcAccountLimits'
-                                                text={localize('Account Limits')}
-                                                onClickLink={toggleDrawer}
-                                            />
-                                        </MobileDrawer.Item>
                                         <MobileDrawer.Item
                                             className={
                                                 should_show_regulatory_information
                                                     ? ''
                                                     : 'header__menu-mobile-theme--trader-hub'
                                             }
-                                        >
-                                            <MenuLink
-                                                link_to={getStaticUrl('/responsible')}
-                                                icon='IcVerification'
-                                                text={localize('Responsible trading')}
-                                                onClickLink={toggleDrawer}
-                                            />
-                                        </MobileDrawer.Item>
+                                        ></MobileDrawer.Item>
 
                                         <MobileDrawer.Item>
                                             <a
