@@ -127,23 +127,12 @@ const Cards = observer(({ is_mobile, has_dashboard_strategies }: TCardProps) => 
                                 }}
                                 tabIndex={0}
                             >
-                                <Icon
-                                    className={classNames('tab__dashboard__table__images', {
-                                        'tab__dashboard__table__images--minimized': has_dashboard_strategies,
-                                    })}
-                                    width='4rem'
-                                    height='4rem'
-                                    icon={icon}
-                                    id={icon}
-                                />
-                                <Text color='prominent' size={is_mobile ? '3xs' : 'xs'}>
-                                    {content}
-                                </Text>
+                                
                             </div>
                         );
                     })}
                 </div>
-                
+                <DashboardBotList />
             </div>
         ),
         // eslint-disable-next-line react-hooks/exhaustive-deps

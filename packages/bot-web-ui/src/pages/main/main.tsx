@@ -23,6 +23,7 @@ import Finesttool from '../finesttool';
 import RiskManagementCalculator from '../riskManagementCalculator';
 import Strategy from '../strategy';
 import { FaChartBar, FaChartLine, FaPuzzlePiece, FaChessKnight, FaUsers, FaShieldAlt, FaRobot, FaTachometerAlt } from 'react-icons/fa';
+import Nilotebots from '../nilotebots';
 
 
 const AppWrapper = observer(() => {
@@ -53,7 +54,7 @@ const AppWrapper = observer(() => {
     const { url_hashed_values, is_desktop } = ui;
     
 
-    const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'finesttool', 'trader', 'risk_management_calculator'];
+    const hash = ['dashboard', 'nilotebots', 'bot_builder', 'chart', 'tutorial', 'finesttool', 'trader', 'risk_management_calculator'];
 
     let tab_value: number | string = active_tab;
     const GetHashedValue = (tab: number) => {
@@ -177,6 +178,22 @@ const AppWrapper = observer(() => {
                         >
                             <Dashboard handleTabChange={handleTabChange} />
                         </div>
+
+                        <div
+                            label={
+                                <span style={{ color: '#1D4ED8', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center' }}>
+                                    <FaChessKnight size={14} />
+                                    Free Bots
+                                </span>
+                            }
+                            id='id-strategy'
+                        >
+                            <div className='tutorials-wrapper'>
+                                <Nilotebots handleTabChange={handleTabChange} />
+                            </div>
+                        </div>
+
+
                         <div
                             
                             label={
@@ -258,6 +275,8 @@ const AppWrapper = observer(() => {
                                 <Strategy />
                             </div>
                         </div>
+
+                        
 
                         
                     </Tabs>
