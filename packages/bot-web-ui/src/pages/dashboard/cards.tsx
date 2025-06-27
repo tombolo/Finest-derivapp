@@ -131,12 +131,12 @@ const Cards = observer(({ is_mobile, has_dashboard_strategies }: TCardProps) => 
                                     className={classNames('tab__dashboard__table__images', {
                                         'tab__dashboard__table__images--minimized': has_dashboard_strategies,
                                     })}
-                                    width='4rem'
-                                    height='4rem'
+                                    width='8rem'
+                                    height='8rem'
                                     icon={icon}
                                     id={icon}
                                 />
-                                <Text color='prominent' size={is_mobile ? '3xs' : 'xs'}>
+                                <Text color='prominent' size={is_mobile ? 'xxs' : 'xs'}>
                                     {content}
                                 </Text>
                             </div>
