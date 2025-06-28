@@ -5,7 +5,7 @@
     height: calc(100vh - 8.4rem);
     overflow: visible; // changed from hidden
 
-    padding-top: 2rem; // add space at the top (adjust as needed)
+     // add space at the top (adjust as needed)
 
     @include mobile-screen {
         height: calc(100vh - 3.4rem);
