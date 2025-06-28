@@ -3,7 +3,9 @@
 .bot-dashboard {
     position: relative;
     height: calc(100vh - 8.4rem);
-    overflow: hidden;
+    overflow: visible; // changed from hidden
+
+    padding-top: 2rem; // add space at the top (adjust as needed)
 
     @include mobile-screen {
         height: calc(100vh - 3.4rem);
