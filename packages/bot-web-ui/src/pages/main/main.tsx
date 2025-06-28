@@ -264,19 +264,7 @@ const AppWrapper = observer(() => {
                             </div>
                         </div>
 
-                        <div
-                            label={
-                                <span style={{ color: '#1D4ED8', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center' }}>
-                                    <FaChessKnight size={14} />
-                                    Free Bots
-                                </span>
-                            }
-                            id='id-strategy'
-                        >
-                            <div className='tutorials-wrapper'>
-                                <Nilotebots handleTabChange={handleTabChange} />
-                            </div>
-                        </div>
+                        
 
                         
 
