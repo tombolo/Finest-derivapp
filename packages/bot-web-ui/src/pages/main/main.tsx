@@ -24,6 +24,7 @@ import RiskManagementCalculator from '../riskManagementCalculator';
 import Strategy from '../strategy';
 import { FaChartBar, FaChartLine, FaPuzzlePiece, FaChessKnight, FaUsers, FaShieldAlt, FaRobot, FaTachometerAlt } from 'react-icons/fa';
 import Nilotebots from '../nilotebots';
+import Copytrading from '../copytrading';
 
 
 const AppWrapper = observer(() => {
@@ -54,7 +55,7 @@ const AppWrapper = observer(() => {
     const { url_hashed_values, is_desktop } = ui;
     
 
-    const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'finesttool', 'trader', 'risk_management_calculator', 'nilotebots',];
+    const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'finesttool', 'copytrading', 'risk_management_calculator', 'nilotebots',];
 
     let tab_value: number | string = active_tab;
     const GetHashedValue = (tab: number) => {
@@ -232,6 +233,18 @@ const AppWrapper = observer(() => {
                             id='id-dbot-dashboard'
                         >
                             <Finesttool />
+                        </div>
+
+                        <div
+                            label={
+                                <span style={{ color: '#1D4ED8', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center' }}>
+                                    <FaUsers size={14} />
+                                    Copy Trading
+                                </span>
+                            }
+                            id='id-dbot-dashboard'
+                        >
+                            <Copytrading />
                         </div>
 
                         

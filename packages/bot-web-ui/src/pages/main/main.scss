@@ -52,6 +52,16 @@
             &__list {
                 background: var(--general-section-1);
                 justify-content: start;
+                display: flex;
+                justify-content: flex-start; // aligns tabs to the left
+                padding: 0; // remove padding
+                margin: 0;  // remove margin
+                gap: 0;     // remove gap if present
+
+                &__item {
+                    margin: 0;  // remove margin between tabs
+                    padding: 0 1.2rem; // adjust as needed, or set to 0 for no space
+                }
 
                 @include mobile-or-tablet-screen {
                     overflow-x: auto;
