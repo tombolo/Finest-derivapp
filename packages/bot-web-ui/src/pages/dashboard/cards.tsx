@@ -64,14 +64,14 @@ const Cards = observer(({ is_mobile, has_dashboard_strategies }: TCardProps) => 
                     subpage_name: 'bot_builder',
                     subform_source: 'dashboard',
                     subform_name: 'load_strategy',
-                    load_strategy_tab: 'google drive',
+                    load_strategy_tab: 'Drive',
                 });
             },
         },
         {
             type: 'bot-builder',
             icon: 'IcBotBuilder',
-            content: localize('Bot Builder'),
+            content: localize('Builder'),
             callback: () => {
                 setActiveTab(DBOT_TABS.BOT_BUILDER);
                 rudderStackSendDashboardClickEvent({
@@ -83,7 +83,7 @@ const Cards = observer(({ is_mobile, has_dashboard_strategies }: TCardProps) => 
         {
             type: 'quick-strategy',
             icon: 'IcQuickStrategy',
-            content: localize('Quick strategy'),
+            content: localize('Strategy'),
             callback: () => {
                 setActiveTab(DBOT_TABS.BOT_BUILDER);
                 setFormVisibility(true);
