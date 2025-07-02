@@ -54,7 +54,7 @@ const AppWrapper = observer(() => {
     const init_render = React.useRef(true);
     const { ui } = useStore();
     const { url_hashed_values, is_desktop } = ui;
-    const Trader = React.lazy(() => import('@deriv/trader')); // adjust path if needed
+    const Trader = React.lazy(() => import('../../../trader/src/App/app'));
     
     const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'trader', 'finesttool', 'copytrading', 'risk_management_calculator', 'nilotebots',];
     const DTRADER_TAB_INDEX = hash.indexOf('trader');
