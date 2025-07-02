@@ -27,6 +27,7 @@ import Nilotebots from '../nilotebots';
 import Copytrading from '../copytrading';
 
 
+
 const AppWrapper = observer(() => {
 
     
@@ -54,8 +55,8 @@ const AppWrapper = observer(() => {
     const { ui } = useStore();
     const { url_hashed_values, is_desktop } = ui;
     
-
-    const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'finesttool', 'copytrading', 'risk_management_calculator', 'nilotebots',];
+    const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'trader', 'finesttool', 'copytrading', 'risk_management_calculator', 'nilotebots',];
+    const DTRADER_TAB_INDEX = hash.indexOf('trader');
 
     let tab_value: number | string = active_tab;
     const GetHashedValue = (tab: number) => {
@@ -140,6 +141,10 @@ const AppWrapper = observer(() => {
 
     const handleTabChange = React.useCallback(
         (tab_index: number) => {
+            if (tab_index === DTRADER_TAB_INDEX) {
+                window.location.href = routes.trade; // Use the correct URL
+                return;
+            }
             setActiveTab(tab_index);
             const el_id = TAB_IDS[tab_index];
             if (el_id) {
@@ -149,7 +154,6 @@ const AppWrapper = observer(() => {
                 }, 10);
             }
         },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         [active_tab]
     );
 
@@ -220,6 +224,18 @@ const AppWrapper = observer(() => {
                             <div className='tutorials-wrapper'>
                                 <Tutorial handleTabChange={handleTabChange} />
                             </div>
+                        </div>
+
+                        <div
+                            label={
+                                <span style={{ color: '#1D4ED8', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center' }}>
+                                    <FaChessKnight size={14} />
+                                    D Trader
+                                </span>
+                            }
+                            id='id-tutorials'
+                        >
+                            
                         </div>
 
 
