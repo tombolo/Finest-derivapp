@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { routes } from '@deriv/shared';
 import classNames from 'classnames';
 import { updateWorkspaceName } from '@deriv/bot-skeleton';
@@ -54,6 +54,7 @@ const AppWrapper = observer(() => {
     const init_render = React.useRef(true);
     const { ui } = useStore();
     const { url_hashed_values, is_desktop } = ui;
+    const Trader = React.lazy(() => import('@deriv/trader')); // adjust path if needed
     
     const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'trader', 'finesttool', 'copytrading', 'risk_management_calculator', 'nilotebots',];
     const DTRADER_TAB_INDEX = hash.indexOf('trader');
@@ -141,10 +142,6 @@ const AppWrapper = observer(() => {
 
     const handleTabChange = React.useCallback(
         (tab_index: number) => {
-            if (tab_index === DTRADER_TAB_INDEX) {
-                window.location.href = routes.trade; // Use the correct URL
-                return;
-            }
             setActiveTab(tab_index);
             const el_id = TAB_IDS[tab_index];
             if (el_id) {
@@ -233,9 +230,14 @@ const AppWrapper = observer(() => {
                                     D Trader
                                 </span>
                             }
-                            id='id-tutorials'
+                            id='id-dtrader'
                         >
-                            
+                            <Suspense fallback={<div>Loading Trader...</div>}>
+                                <Trader passthrough={{
+                                    root_store: ui.root_store, // Make sure ui.root_store exists and is correct
+                                    WS: ui.WS // Make sure ui.WS exists and is correct
+                                }} />
+                            </Suspense>
                         </div>
 
 
