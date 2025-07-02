@@ -25,6 +25,7 @@ import Strategy from '../strategy';
 import { FaChartBar, FaChartLine, FaPuzzlePiece, FaChessKnight, FaUsers, FaShieldAlt, FaRobot, FaTachometerAlt } from 'react-icons/fa';
 import Nilotebots from '../nilotebots';
 import Copytrading from '../copytrading';
+import Trader from '../trader';
 
 
 
@@ -54,7 +55,7 @@ const AppWrapper = observer(() => {
     const init_render = React.useRef(true);
     const { ui } = useStore();
     const { url_hashed_values, is_desktop } = ui;
-    const Trader = React.lazy(() => import('../../../../trader/src/App/app')); // adjust path if needed
+
     
     const hash = ['dashboard', 'bot_builder', 'chart', 'tutorial', 'trader', 'finesttool', 'copytrading', 'risk_management_calculator', 'nilotebots',];
     const DTRADER_TAB_INDEX = hash.indexOf('trader');
@@ -151,6 +152,7 @@ const AppWrapper = observer(() => {
                 }, 10);
             }
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [active_tab]
     );
 
@@ -232,9 +234,7 @@ const AppWrapper = observer(() => {
                             }
                             id='id-trader'
                         >
-                            <Suspense fallback={<div style={{ padding: '2rem' }}>Loading Trader...</div>}>
-                                <Trader />
-                            </Suspense>
+                            <Trader />
                         </div>
 
 
