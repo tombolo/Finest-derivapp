@@ -347,17 +347,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                                         'dc-mobile-drawer__subheader--hidden': is_submenu_expanded,
                                     })}
                                 >
-                                    <PlatformSwitcher
-                                        app_routing_history={app_routing_history}
-                                        is_mobile
-                                        is_landing_company_loaded={is_landing_company_loaded}
-                                        is_logged_in={is_logged_in}
-                                        is_logging_in={is_logging_in}
-                                        platform_config={platform_config}
-                                        toggleDrawer={toggleDrawer}
-                                        current_language={current_language}
-                                        setTogglePlatformType={setTogglePlatformType}
-                                    />
+                                    
                                 </MobileDrawer.SubHeader>
                             )}
 
