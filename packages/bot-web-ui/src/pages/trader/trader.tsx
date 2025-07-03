@@ -1,11 +1,19 @@
 import React from 'react';
 import styles from './trader.module.scss';
-import AppWrapper from 'Components/main/main';
+import Link from 'next/link';
 
 const TraderPage = () => {
     return (
-        <div>
-            <AppWrapper />
+        <div className={styles.pageContainer}>
+            <header className={styles.header}>
+                <div className={styles.logo}>Finest Trading</div>
+                <nav className={styles.nav}>
+                    <Link href="/" className={styles.navLink}>
+                        Return to Bot
+                    </Link>
+                </nav>
+            </header>
+
             <div className={styles.container}>
                 <iframe
                     src="https://finest-derivapp.vercel.app/dtrader"
