@@ -1,17 +1,21 @@
 import React from 'react';
-import styles from './trader.module.scss'; // assuming you renamed it correctly
+import styles from './trader.module.scss';
+import AppWrapper from '../main/main';
 
-const Finesttool = () => {
+const TraderPage = () => {
     return (
-        <div className={styles.container}>
-            <iframe
-                src="https://finest-derivapp.vercel.app/dtrader"
-                title="Finest Analysis"
-                className={styles.iframe}
-                allowFullScreen
-            />
+        <div>
+            <AppWrapper />
+            <div className={styles.container}>
+                <iframe
+                    src="https://finest-derivapp.vercel.app/dtrader"
+                    title="Finest Analysis"
+                    className={styles.iframe}
+                    allowFullScreen
+                />
+            </div>
         </div>
     );
 };
 
-export default Finesttool;
+export default TraderPage;
