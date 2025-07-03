@@ -341,15 +341,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
                 <Div100vhContainer height_offset='40px'>
                     <div className='header__menu-mobile-body-wrapper'>
                         <React.Fragment>
-                            {!(is_traders_hub_route || is_wallet_route) && (
-                                <MobileDrawer.SubHeader
-                                    className={classNames({
-                                        'dc-mobile-drawer__subheader--hidden': is_submenu_expanded,
-                                    })}
-                                >
-                                    
-                                </MobileDrawer.SubHeader>
-                            )}
+                            
 
                             <MobileDrawer.Body className={is_traders_hub_route || is_wallet_route ? 'no-padding' : ''}>
                                 <div className='header__menu-mobile-platform-switcher' id='mobile_platform_switcher' />

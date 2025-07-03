@@ -52,43 +52,7 @@ const PlatformSwitcher = ({
         </div>
     ) : (
         <React.Fragment>
-            <div
-                data-testid='dt_platform_switcher'
-                className={classNames(
-                    'platform-switcher',
-                    { 'platform-switcher--active': is_open },
-                    { 'platform-switcher--is-mobile': !isDesktop }
-                )}
-                onClick={() => setIsOpen(!is_open)}
-            >
-                <Icon
-                    className='platform-switcher__icon'
-                    icon={getPlatformInformation(app_routing_history).icon}
-                    description={getPlatformInformation(app_routing_history).header}
-                    width={120}
-                    height={25}
-                />
-
-                <Icon className='platform-switcher__arrow' icon='IcChevronDownBold' />
-            </div>
-            <CSSTransition
-                mountOnEnter
-                appear
-                in={is_open}
-                classNames={{
-                    enterDone: 'platform-dropdown--enter-done',
-                }}
-                timeout={isDesktop && is_open ? 0 : 250}
-                unmountOnExit
-            >
-                <PlatformDropdown
-                    platform_config={platform_config}
-                    closeDrawer={closeDrawer}
-                    current_language={current_language}
-                    app_routing_history={app_routing_history}
-                    setTogglePlatformType={setTogglePlatformType}
-                />
-            </CSSTransition>
+            
         </React.Fragment>
     );
 };
