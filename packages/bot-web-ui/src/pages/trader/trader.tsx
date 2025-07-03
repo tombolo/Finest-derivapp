@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './trader.module.scss';
-import AppWrapper from '../main/main';
+import AppWrapper from 'Components/main/main';
 
 const TraderPage = () => {
     return (
