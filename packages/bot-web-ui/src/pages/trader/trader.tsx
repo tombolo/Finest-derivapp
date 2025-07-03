@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './trader.module.scss';
-import Link from 'next/link';
+
 
 const TraderPage = () => {
     return (
@@ -8,9 +8,9 @@ const TraderPage = () => {
             <header className={styles.header}>
                 <div className={styles.logo}>Finest Trading</div>
                 <nav className={styles.nav}>
-                    <Link href="/" className={styles.navLink}>
+                   
                         Return to Bot
-                    </Link>
+                    
                 </nav>
             </header>
 
