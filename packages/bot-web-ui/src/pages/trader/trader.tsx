@@ -4,9 +4,8 @@ import styles from './trader.module.scss';
 
 const TraderPage = () => {
     return (
-        <div className={styles.pageContainer}>
+        <div>
             
-
             <div className={styles.container}>
                 <iframe
                     src="https://finest-derivapp.vercel.app/dtrader"
